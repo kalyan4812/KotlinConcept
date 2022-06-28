@@ -13,15 +13,16 @@ fun main() {
 
     println(list)
 
+    fun add(a: Int, b: Int): Int = a + b
 
-    fun add( a:Int, b:Int):Int=a+b
-
-    val lambdaAdd:(a:Int,b:Int)->Int={ a,b->a+b} // u can use var.
+    val lambdaAdd: (a: Int, b: Int) -> Int = { a, b -> a + b } // u can use var.
     //or val lambdaAdd:(Int,Int)->Int={ a,b->a+b}
     // or val add={a:Int,b:Int -> a+b}
 
+    // a,b -input,Int-return type above.
 
-    println(lambdaAdd(2,4))
-    println(lambdaAdd.invoke(2,3))
+
+    println(lambdaAdd(2, 4))
+    println(lambdaAdd.invoke(2, 3))
 }
 // SHIFT+F6 TO RENAME.

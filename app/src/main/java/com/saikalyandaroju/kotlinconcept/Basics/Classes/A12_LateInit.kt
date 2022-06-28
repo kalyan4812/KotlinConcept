@@ -60,4 +60,10 @@ fun main() {
       * you can't do obj/obj2=A12_LateInit(),since it is a val.
       *but you can do obj.fname="ram",instance variables can be reassigned.
      */
+
+    val obj3 = lazy { A12_LateInit("sai", "ram") }
+    // obj3 will be allocated memory only when we use it.
+
+    println(obj3.value.randomFun())
+
 }

@@ -22,12 +22,33 @@ fun main() {
 
     println(list2) // [9, 2, 3, 12]
 
+
+    val newlist = list2.map {
+        it * it + 1
+    }  // transforming the list.
+    println(newlist)
+
+
+    val oddlist = list2.filterNot {
+        it % 2 == 0
+    }
+    println(oddlist)
+
+
+    // creating sublist using slice/sublist.
+    val sublist = list2.slice(0..3)
+    println(sublist)  // it prints 0,1,2,3 position.
+
+    println(list2.subList(0, 3)) // it prints 0,1,2 position and it is mutable.
+
+    println(list2.elementAtOrNull(9)) // if list doesn't have that index ,execution won't stop.
+
     //------------------------------
 
 
     val list3 = mutableListOf<Int>()
 
-    while (list3.size<5) {
+    while (list3.size < 5) {
         val x = readLine()?.toInt()
 
         if (x != null) {
