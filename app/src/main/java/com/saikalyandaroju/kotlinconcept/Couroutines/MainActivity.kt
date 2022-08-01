@@ -131,4 +131,3 @@ class MainActivity : AppCompatActivity() {
 
 // in couroutine ,if they are two suspend functions,they will get executed one after another by default.
 // one way of solving is to launch two more separete coroutines to get the answers.(not good way if they are many suspend function)
-//

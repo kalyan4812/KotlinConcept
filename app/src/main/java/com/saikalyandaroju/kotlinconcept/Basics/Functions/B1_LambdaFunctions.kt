@@ -24,5 +24,40 @@ fun main() {
 
     println(lambdaAdd(2, 4))
     println(lambdaAdd.invoke(2, 3))
+
+
+    val square: (Int) -> Int = { num: Int -> num * num }
+
+    val shortHandSqaure: (Int) -> Int = { it * it } // only for one param.
+
+
+    // lambdas for extensions.
+
+    val lambda_ext: String.() -> String = {
+
+        this + "some operation" // last line is considred as return statement.
+    }
+    println("hi".lambda_ext())
+
+
+    // lambda for multiple return statements.
+
+    val ageLambda: (Int) -> String = description@{ it ->
+
+        if (it >= 18) {
+            return@description "Adult"
+        } else {
+            return@description "Child"
+        }
+    }
+
+    println(ageLambda.invoke(5))
+
+    // lambda with pairs.
+
+    val pairLambda: (Pair<String, String>) -> Unit = {
+        println("${it.first}    ${it.second}")
+    }
+    println(pairLambda(Pair("hi", "hello")))
 }
 // SHIFT+F6 TO RENAME.

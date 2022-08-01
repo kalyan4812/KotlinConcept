@@ -9,13 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinConcept">
-        <activity android:name=".Couroutines.MainActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".KotlinFlows.FlowActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Couroutines.MainActivity" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
